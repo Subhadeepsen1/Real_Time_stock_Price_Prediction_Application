@@ -2,6 +2,10 @@
 
 Stock analysis with Yahoo Finance data, technical indicators, supervised and unsupervised machine learning, interactive charts, and auto-refresh.
 
+## Live dashboard
+
+[Open the deployed Streamlit app](https://appapppy-rjtappp37vfqy3zuoqgwehc.streamlit.app/)
+
 ## Desktop application
 
 The Tkinter application remains available locally with its existing analysis tools.
