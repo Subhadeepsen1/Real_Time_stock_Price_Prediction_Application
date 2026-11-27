@@ -20,9 +20,9 @@ The Streamlit dashboard is the hosted web entry point. It includes configurable 
 1. Push the repository to GitHub.
 2. In [Streamlit Community Cloud](https://share.streamlit.io/), create an app from this repository and select the `main` branch after the dashboard changes have been merged there.
 3. Set **Main file path** to `streamlit_app.py`.
-4. In **Advanced settings**, choose **Python 3.11**. The pinned TensorFlow 2.15 dependency does not support Python 3.14.
+4. The dependency ranges support Streamlit Cloud's Python 3.14 runtime. If you select a different Python version, use Python 3.11 or newer.
 
-The web app needs both `streamlit_app.py` and `stock_models.py`; keep them in the repository root with `requirements.txt`. Yahoo Finance provides the market data and may apply availability or rate limits.
+The web app needs both `streamlit_app.py` and `stock_models.py`; keep them in the repository root with `requirements.txt`. The models are implemented with NumPy; TensorFlow and Keras are not required. Yahoo Finance provides the market data and may apply availability or rate limits.
 
 For local web testing:
 
