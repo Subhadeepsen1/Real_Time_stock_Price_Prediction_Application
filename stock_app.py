@@ -1,4 +1,14 @@
 #!/usr/bin/env python3
+"""
+Enhanced Stock Analysis App with Real-Time Features
+==================================================
+
+Popular real-time stock analysis with:
+- Technical indicators (RSI, MACD, Bollinger Bands, Stochastic, Moving Averages)
+- Supervised learning (Linear Regression, Random Forest)
+- Unsupervised learning (K-means, PCA)
+- Real-time data fetching and auto-refresh
+"""
 
 import tkinter as tk
 from tkinter import ttk, messagebox
@@ -58,7 +68,7 @@ class StockApp:
         self.predicted_future = None  # (timestamp, predicted_price)
         
         self.create_gui()
-        
+        # Ensure background timers are cancelled on window close to avoid Tk errors
         try:
             self.root.protocol("WM_DELETE_WINDOW", self.on_close)
         except Exception:
@@ -382,6 +392,7 @@ class StockApp:
         canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
         
     def _plot_candles(self, ax, df):
+        """Plot OHLC candlesticks using rectangles and wicks."""
         data = df[['Open', 'High', 'Low', 'Close']].dropna()
         if data.empty:
             return
